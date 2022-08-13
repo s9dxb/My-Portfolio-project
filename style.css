@@ -1,0 +1,291 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1d1d1d;
+  color: white;
+}
+
+body::before {
+  content: "<body>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1.3rem;
+  position: absolute;
+  margin-top: 5rem;
+  margin-left: 9.5rem;
+}
+
+body:after {
+  content: "<body/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 3.8rem;
+  margin-left: 9.5rem;
+}
+
+@media (max-width: 500px) {
+  body::before {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  body::after {
+    display: none;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  height: 60px;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #1d1d1d;
+  box-shadow: 0px 4px 0px -1px rgba(8, 253, 216, 0.75);
+  -webkit-box-shadow: 0px 4px 0px -1px rgba(8, 253, 216, 0.75);
+  -moz-box-shadow: 0px 4px 0px -1px rgba(8, 253, 216, 0.75);
+}
+
+#navlist {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+#logo {
+  font-family: "Outfit", sans-serif;
+  font-size: 22px;
+}
+.elements {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+}
+a:hover {
+  color: #08fdd8;
+  cursor: pointer;
+}
+
+#hamburger-icon {
+  margin: 10px auto 0 10px;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  #navbar {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
+
+.text1 {
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 5.3rem;
+  margin-top: 90px;
+  margin-left: 150px;
+  margin-right: 300px;
+  padding-inline: 100px;
+}
+
+h1::first-letter {
+  color: #ee1d52;
+  font-size: 5.3rem;
+}
+h1:before {
+  content: "<h1>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: -1rem;
+  left: 12.5rem;
+}
+h1:after {
+  content: "<h1/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 4rem;
+  margin-left: 1.6rem;
+}
+
+@media (max-width: 500px) {
+  h1::before {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  h1::after {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .text1 {
+    font-size: 2.5rem;
+    margin: 50px auto;
+  }
+}
+@media (max-width: 500px) {
+  h1::first-letter {
+    color: #ee1d52;
+    font-size: 3.5rem;
+  }
+}
+
+#principale {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 50px 150px 50px 150px;
+}
+
+.card1 {
+  padding: 30px 30px 25px;
+  margin: 0px 0px 50px;
+  border-top: solid 2px;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
+    0 1px 10px 0 rgb(0 0 0 / 12%);
+  border-top-color: #e4ee89;
+}
+.card2 {
+  padding: 30px 30px 25px;
+  margin: 0px 0px 50px;
+  border-top: solid 2px;
+  border-top-color: cornflowerblue;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
+    0 1px 10px 0 rgb(0 0 0 / 12%);
+}
+.card3 {
+  padding: 30px 30px 25px;
+  margin: 0px 0px 50px;
+  border-top: solid 2px;
+  border-top-color: #fd2155;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
+    0 1px 10px 0 rgb(0 0 0 / 12%);
+}
+.card4 {
+  padding: 30px 30px 25px;
+  margin: 0px 0px 50px;
+  border-top: solid 2px;
+  border-top-color: orange;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
+    0 1px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.yellowtitle {
+  color: #e4ee89;
+  font-size: 13px;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.bluetitle {
+  color: cornflowerblue;
+  font-size: 13px;
+  font-family: "open sans", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.redtitle {
+  color: #fd2155;
+  font-size: 13px;
+  font-family: "open sans", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.orangetitle {
+  color: orange;
+  font-size: 13px;
+  font-family: "open sans", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.divtitle {
+  font-size: 1.8rem;
+  font-family: "outfit", sans-serif;
+  margin-bottom: 15px;
+}
+
+.divtext {
+  font-size: 18px;
+  font-family: "outfit", sans-serif;
+  color: #a7a7a7;
+  margin: 15px 0px 20px;
+}
+
+@media (max-width: 500px) {
+  #principale {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
