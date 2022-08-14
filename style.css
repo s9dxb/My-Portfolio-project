@@ -15,8 +15,8 @@ body::before {
   color: #515152;
   font-size: 1.3rem;
   position: absolute;
-  margin-top: 5rem;
   margin-left: 9.5rem;
+  top: 0;
 }
 
 body:after {
@@ -29,13 +29,13 @@ body:after {
   margin-left: 9.5rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   body::before {
     display: none;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   body::after {
     display: none;
   }
@@ -44,13 +44,24 @@ html {
   scroll-behavior: smooth;
 }
 
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 62.5%;
+    min-width: 320px;
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
 #navbar {
   display: flex;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
+  z-index: 1;
   height: 60px;
   align-items: center;
   padding: 0 20px;
+  top: 0;
+  width: 100%;
   background-color: #1d1d1d;
   box-shadow: 0px 4px 0px -1px rgba(8, 253, 216, 0.75);
   -webkit-box-shadow: 0px 4px 0px -1px rgba(8, 253, 216, 0.75);
@@ -60,9 +71,11 @@ html {
 #navlist {
   list-style: none;
   display: flex;
+  justify-content: flex-end;
   gap: 50px;
   align-items: center;
 }
+
 #logo {
   font-family: "Outfit", sans-serif;
   font-size: 22px;
@@ -126,24 +139,33 @@ a:hover {
   margin-bottom: 10px;
 }
 
+/* @media only screen and (max-width: 600px) {
+  #navbar {
+    display: none;
+  }
+} */
+
 @media only screen and (max-width: 600px) {
   #navbar {
     display: none;
   }
-
   #hamburger-icon {
     display: block;
   }
 }
 
+/* @media only screen and (max-width: 600px) {
+  #hamburger-icon {
+    display: block;
+  }
+} */
+
 .text1 {
   color: #fff;
   font-family: "Outfit", sans-serif;
   font-size: 5.3rem;
-  margin-top: 90px;
-  margin-left: 150px;
-  margin-right: 300px;
-  padding-inline: 100px;
+  margin: 10.625rem 18.75rem auto 9.375rem;
+  padding-inline: 6.25rem;
 }
 
 h1::first-letter {
@@ -169,28 +191,282 @@ h1:after {
   margin-left: 1.6rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   h1::before {
     display: none;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   h1::after {
     display: none;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .text1 {
-    font-size: 2.5rem;
-    margin: 50px auto;
+    display: block;
+    margin: 3rem auto 3rem auto;
+    font-size: 3.3rem;
   }
 }
-@media (max-width: 500px) {
+
+@media (max-width: 600px) {
   h1::first-letter {
     color: #ee1d52;
-    font-size: 3.5rem;
+    font-size: 4.3rem;
+  }
+}
+
+.firstP {
+  color: #08fdd8;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  margin: 5.125rem auto 2.125rem 15.625rem;
+}
+
+@media (max-width: 600px) {
+  .firstP {
+    margin: auto;
+    text-align: center;
+  }
+}
+
+p::before {
+  content: "<p>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: -2rem;
+  margin-left: -0.5rem;
+}
+p::after {
+  content: "</p>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 1.5rem;
+  left: 15rem;
+}
+
+@media (max-width: 600px) {
+  p::before {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  p::after {
+    display: none;
+  }
+}
+.button1 {
+  color: #08fdd8;
+  display: inline-block;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  border: 0.1em solid #08fdd8;
+  border-radius: 0.12em;
+  padding: 0.7rem 2.5rem;
+  margin: 1.125rem auto 3.125rem 15.625rem;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.25rem;
+  transition: all 0.2s;
+}
+.button1:hover {
+  color: black;
+  box-shadow: inset 230px 0 0 0 #08fdd8;
+}
+
+@media screen and (max-width: 600px) {
+  .button1 {
+    display: block;
+    max-width: fit-content;
+    margin: 2rem auto auto auto;
+  }
+}
+
+.text2 {
+  color: #08fdd8;
+  font-family: "Outfit", sans-serif;
+  font-size: 4.3rem;
+  letter-spacing: 1px;
+  margin: 5.125rem 15.625rem 3.125rem 15.625rem;
+}
+
+@media screen and (max-width: 600px) {
+  .text2 {
+    margin: 5.125rem auto;
+    font-size: 3.3rem;
+    text-align: center;
+  }
+}
+
+h2::before {
+  content: "<h2>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: -1rem;
+  left: 13.5rem;
+}
+h2:after {
+  content: "<h2/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 4.8rem;
+  left: 13.5rem;
+}
+
+@media (max-width: 600px) {
+  h2::before {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  h2::after {
+    display: none;
+  }
+}
+.Portfolio-description {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  margin: 4.125rem auto 3.125rem auto;
+  padding: 0 15rem 0rem;
+}
+@media screen and (max-width: 600px) {
+  .Portfolio-description {
+    padding: 1rem 3rem;
+  }
+}
+
+.mywork {
+  text-decoration: none;
+  color: #08fdd8;
+  font-family: "Open Sans", sans-serif;
+}
+
+.button2 {
+  display: inline-block;
+  padding: 0.7rem 2.5rem;
+  margin: 1.125rem auto 3.125rem 15.625rem;
+  /* padding: 0.8em 0.35em 0.8em; */
+  border: 0.1em solid #08fdd8;
+  /* width: 230px; */
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300px;
+  color: #08fdd8;
+  /* height: 50px; */
+  text-align: center;
+  transition: all 0.2s;
+  /* margin: 0 10rem 6.25rem auto; */
+  letter-spacing: 4px;
+}
+
+.button2:hover {
+  color: black;
+  box-shadow: inset 230px 0 0 0 #08fdd8;
+}
+
+@media (max-width: 600px) {
+  .button2 {
+    align-items: center;
+  }
+}
+
+.work {
+  width: 20%;
+  height: 15.625rem;
+}
+
+section {
+  display: block;
+  margin-top: 5rem;
+}
+
+.work:hover {
+  transform: scale3d(1.1, 1.1, 1);
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .work {
+    width: 100%;
+    height: 15.625rem;
+  }
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+section::before {
+  content: "<section>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1.3rem;
+  position: absolute;
+  margin-top: -3rem;
+  margin-left: 150px;
+}
+section::after {
+  content: "</section>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1.3rem;
+  margin-left: 150px;
+}
+
+@media (max-width: 600px) {
+  section::before {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  section::after {
+    display: none;
+  }
+}
+
+.text3 {
+  color: #08fdd8;
+  font-family: "outfit", sans-serif;
+  font-size: 4.3rem;
+  margin: 5rem 18.75rem auto 9.375rem;
+  padding-inline: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .text3 {
+    margin: 5.125rem auto;
+    padding: 0;
+    font-size: 3.3rem;
+    text-align: center;
+  }
+}
+
+.AboutMe {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  margin: 4.125rem auto 3.125rem auto;
+  padding: 0 15rem 0rem;
+}
+
+@media screen and (max-width: 600px) {
+  .AboutMe {
+    padding: 1rem 3rem;
   }
 }
 
@@ -198,7 +474,7 @@ h1:after {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin: 50px 150px 50px 150px;
+  margin: 150px 150px 50px 150px;
 }
 
 .card1 {
@@ -277,15 +553,16 @@ h1:after {
 }
 
 .divtext {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: "outfit", sans-serif;
   color: #a7a7a7;
   margin: 15px 0px 20px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   #principale {
     grid-template-columns: 1fr;
     justify-content: center;
+    align-items: center;
   }
 }
