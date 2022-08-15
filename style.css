@@ -16,7 +16,7 @@ body::before {
   font-size: 1.3rem;
   position: absolute;
   margin-left: 9.5rem;
-  top: 0;
+  margin-top: -5rem;
 }
 
 body:after {
@@ -124,18 +124,53 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  list-style: none;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  background-color: #1d1d1d;
+  height: 20rem;
+}
+/* li {
+  display: block;
+  width: 100%;
+  border: #08fdd8 solid;
+  text-align: center;
+  margin: 0;
+} */
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
+/* @media (max-width: 600px) {
+  .mobile-elememt {
+    border: #fff solid;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    background-color: #1d1d1d;
+  }
+} */
+
 .mobile-menu {
+  z-index: 1;
   display: none;
   position: absolute;
   top: 50px;
   left: 0;
   height: calc(100vh - 50px);
   width: 100%;
+  border-bottom: solid #515152;
 }
 
 .mobile-menu li {
+  display: block;
+  width: 100%;
+  text-align: center;
   margin-bottom: 10px;
 }
 
@@ -379,7 +414,9 @@ h2:after {
 
 @media (max-width: 600px) {
   .button2 {
-    align-items: center;
+    display: block;
+    max-width: fit-content;
+    margin: 2rem auto auto auto;
   }
 }
 
@@ -479,7 +516,7 @@ section::after {
 
 .card1 {
   padding: 30px 30px 25px;
-  margin: 0px 0px 50px;
+  margin: 0px 0px 20px;
   border-top: solid 2px;
   box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
     0 1px 10px 0 rgb(0 0 0 / 12%);
@@ -487,7 +524,7 @@ section::after {
 }
 .card2 {
   padding: 30px 30px 25px;
-  margin: 0px 0px 50px;
+  margin: 0px 0px 20px;
   border-top: solid 2px;
   border-top-color: cornflowerblue;
   box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
@@ -495,7 +532,7 @@ section::after {
 }
 .card3 {
   padding: 30px 30px 25px;
-  margin: 0px 0px 50px;
+  margin: 0px 0px 20px;
   border-top: solid 2px;
   border-top-color: #fd2155;
   box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
@@ -503,7 +540,7 @@ section::after {
 }
 .card4 {
   padding: 30px 30px 25px;
-  margin: 0px 0px 50px;
+  margin: 0px 0px 20px;
   border-top: solid 2px;
   border-top-color: orange;
   box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
@@ -564,5 +601,101 @@ section::after {
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  .text2 {
+    margin: 5.125rem auto;
+    padding: 0;
+    font-size: 3.3rem;
+    text-align: center;
+  }
+}
+
+form {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 500px) {
+  form {
+    width: 100%;
+  }
+}
+#fname,
+#email,
+#subject {
+  margin: 10px;
+  width: 30rem;
+  height: 50px;
+  margin-left: 250px;
+  padding-left: 15px;
+  font-family: "Open Sans", sans-serif;
+  background: #2b2b2b;
+  border: #2b2b2b;
+  font-size: 16px;
+}
+
+#message {
+  margin: 10px;
+  height: 100px;
+  width: 30rem;
+  margin-left: 250px;
+  padding-left: 15px;
+  padding-top: 10px;
+  font-family: "Open Sans", sans-serif;
+  background: #2b2b2b;
+  border: #2b2b2b;
+  font-size: 16px;
+}
+#submit {
+  display: inline-block;
+  padding: 0.8em 0.35em 0.8em;
+  width: 230px;
+  border: 0.1em solid #08fdd8;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300px;
+  color: #08fdd8;
+  height: 50px;
+  text-align: center;
+  transition: all 0.2s;
+  margin-left: 250px;
+  margin-top: 30px;
+  letter-spacing: 4px;
+  background: #1d1d1d;
+}
+#submit:hover {
+  color: black;
+  box-shadow: inset 230px 0 0 0 #08fdd8;
+}
+form::before {
+  content: "<form>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: -1rem;
+  left: 13.5rem;
+}
+form::after {
+  content: "<form/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 27rem;
+  left: 13.5rem;
+}
+@media (max-width: 500px) {
+  form::before {
+    display: none;
+  }
+  form::after {
+    display: none;
   }
 }
