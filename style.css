@@ -329,7 +329,7 @@ p::after {
   font-family: "Outfit", sans-serif;
   font-size: 4.3rem;
   letter-spacing: 1px;
-  margin: 5.125rem 15.625rem 3.125rem 15.625rem;
+  margin: 5.125rem auto 3.125rem 14rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -373,7 +373,7 @@ h2:after {
   color: #fff;
   font-family: "Open Sans", sans-serif;
   margin: 4.125rem auto 3.125rem auto;
-  padding: 0 15rem 0rem;
+  padding: 0 10rem 0rem;
 }
 @media screen and (max-width: 600px) {
   .Portfolio-description {
@@ -494,24 +494,26 @@ section::after {
   }
 }
 
-.AboutMe {
+/* .AboutMe {
   color: #fff;
   font-family: "Open Sans", sans-serif;
-  margin: 4.125rem auto 3.125rem auto;
-  padding: 0 15rem 0rem;
-}
+  margin: 4.125rem auto 3.125rem auto; */
+/* padding: 0 15rem 0rem;  */
+/* padding: 1rem 3rem;
+} */
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .AboutMe {
     padding: 1rem 3rem;
+    text-align: center;
   }
-}
+} */
 
 #principale {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin: 150px 150px 50px 150px;
+  margin: 50px 50px 50px 50px;
 }
 
 .card1 {
@@ -616,11 +618,13 @@ form {
   margin-top: 70px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 500px) {
   form {
-    width: 100%;
+    margin: 5.125rem auto 3.125rem 9rem;
+    width: auto;
   }
 }
 #fname,
@@ -629,7 +633,7 @@ form {
   margin: 10px;
   width: 30rem;
   height: 50px;
-  margin-left: 250px;
+  /* margin-left: 250px; */
   padding-left: 15px;
   font-family: "Open Sans", sans-serif;
   background: #2b2b2b;
@@ -641,7 +645,7 @@ form {
   margin: 10px;
   height: 100px;
   width: 30rem;
-  margin-left: 250px;
+  /* margin-left: 250px; */
   padding-left: 15px;
   padding-top: 10px;
   font-family: "Open Sans", sans-serif;
@@ -650,28 +654,23 @@ form {
   font-size: 16px;
 }
 #submit {
-  display: inline-block;
-  padding: 0.8em 0.35em 0.8em;
-  width: 230px;
-  border: 0.1em solid #08fdd8;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.12em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300px;
   color: #08fdd8;
-  height: 50px;
+  display: inline-block;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  border: 0.1em solid #08fdd8;
+  border-radius: 0.12em;
+  padding: 0.7rem 2.5rem;
+  margin: 1.125rem auto 3.125rem auto;
+  text-decoration: none;
   text-align: center;
+  letter-spacing: 0.25rem;
   transition: all 0.2s;
-  margin-left: 250px;
-  margin-top: 30px;
-  letter-spacing: 4px;
   background: #1d1d1d;
 }
 #submit:hover {
   color: black;
-  box-shadow: inset 230px 0 0 0 #08fdd8;
+  box-shadow: inset 250px 0 0 0 #08fdd8;
 }
 form::before {
   content: "<form>";
@@ -691,11 +690,19 @@ form::after {
   margin-top: 27rem;
   left: 13.5rem;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   form::before {
     display: none;
   }
   form::after {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  #submit {
+    display: block;
+    max-width: fit-content;
+    margin: 2rem auto auto auto;
   }
 }
