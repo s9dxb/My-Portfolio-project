@@ -25,7 +25,7 @@ body:after {
   color: #515152;
   font-size: 1rem;
   position: absolute;
-  margin-top: 3.8rem;
+  margin-top: 1.8rem;
   margin-left: 9.5rem;
 }
 
@@ -132,29 +132,11 @@ a:hover {
   background-color: #1d1d1d;
   height: 20rem;
 }
-/* li {
-  display: block;
-  width: 100%;
-  border: #08fdd8 solid;
-  text-align: center;
-  margin: 0;
-} */
 
 a {
   text-decoration: none;
   color: white;
 }
-
-/* @media (max-width: 600px) {
-  .mobile-elememt {
-    border: #fff solid;
-    color: #fff;
-    text-decoration: none;
-    font-family: "Outfit", sans-serif;
-    font-size: 20px;
-    background-color: #1d1d1d;
-  }
-} */
 
 .mobile-menu {
   z-index: 1;
@@ -174,12 +156,6 @@ a {
   margin-bottom: 10px;
 }
 
-/* @media only screen and (max-width: 600px) {
-  #navbar {
-    display: none;
-  }
-} */
-
 @media only screen and (max-width: 600px) {
   #navbar {
     display: none;
@@ -188,12 +164,6 @@ a {
     display: block;
   }
 }
-
-/* @media only screen and (max-width: 600px) {
-  #hamburger-icon {
-    display: block;
-  }
-} */
 
 .text1 {
   color: #fff;
@@ -329,7 +299,7 @@ p::after {
   font-family: "Outfit", sans-serif;
   font-size: 4.3rem;
   letter-spacing: 1px;
-  margin: 5.125rem auto 3.125rem 14rem;
+  margin: 5.125rem 15.625rem 3.125rem 15.625rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -373,7 +343,7 @@ h2:after {
   color: #fff;
   font-family: "Open Sans", sans-serif;
   margin: 4.125rem auto 3.125rem auto;
-  padding: 0 10rem 0rem;
+  padding: 0 15rem 0rem;
 }
 @media screen and (max-width: 600px) {
   .Portfolio-description {
@@ -391,19 +361,15 @@ h2:after {
   display: inline-block;
   padding: 0.7rem 2.5rem;
   margin: 1.125rem auto 3.125rem 15.625rem;
-  /* padding: 0.8em 0.35em 0.8em; */
   border: 0.1em solid #08fdd8;
-  /* width: 230px; */
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   font-weight: 300px;
   color: #08fdd8;
-  /* height: 50px; */
   text-align: center;
   transition: all 0.2s;
-  /* margin: 0 10rem 6.25rem auto; */
   letter-spacing: 4px;
 }
 
@@ -494,26 +460,24 @@ section::after {
   }
 }
 
-/* .AboutMe {
+.AboutMe {
   color: #fff;
   font-family: "Open Sans", sans-serif;
-  margin: 4.125rem auto 3.125rem auto; */
-/* padding: 0 15rem 0rem;  */
-/* padding: 1rem 3rem;
-} */
+  margin: 4.125rem auto 3.125rem auto;
+  padding: 0 15rem 0rem;
+}
 
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .AboutMe {
     padding: 1rem 3rem;
-    text-align: center;
   }
-} */
+}
 
 #principale {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin: 50px 50px 50px 50px;
+  margin: 150px 150px 50px 150px;
 }
 
 .card1 {
@@ -618,13 +582,11 @@ form {
   margin-top: 70px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   form {
-    margin: 5.125rem auto 3.125rem 9rem;
-    width: auto;
+    width: 100%;
   }
 }
 #fname,
@@ -633,7 +595,7 @@ form {
   margin: 10px;
   width: 30rem;
   height: 50px;
-  /* margin-left: 250px; */
+  margin-left: 250px;
   padding-left: 15px;
   font-family: "Open Sans", sans-serif;
   background: #2b2b2b;
@@ -641,11 +603,19 @@ form {
   font-size: 16px;
 }
 
+@media (max-width: 600px) {
+  #fname,
+  #email,
+  #subject {
+    margin-left: 50px;
+  }
+}
+
 #message {
   margin: 10px;
   height: 100px;
   width: 30rem;
-  /* margin-left: 250px; */
+  margin-left: 250px;
   padding-left: 15px;
   padding-top: 10px;
   font-family: "Open Sans", sans-serif;
@@ -653,24 +623,41 @@ form {
   border: #2b2b2b;
   font-size: 16px;
 }
+@media (max-width: 600px) {
+  #message {
+    margin-left: 50px;
+  }
+}
 #submit {
-  color: #08fdd8;
   display: inline-block;
-  position: relative;
-  font-family: "Open Sans", sans-serif;
+  padding: 0.8em 0.35em 0.8em;
+  width: 230px;
   border: 0.1em solid #08fdd8;
+  margin: 0 0.3em 0.3em 250px;
   border-radius: 0.12em;
-  padding: 0.7rem 2.5rem;
-  margin: 1.125rem auto 3.125rem auto;
+  box-sizing: border-box;
   text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300px;
+  color: #08fdd8;
+  height: 50px;
   text-align: center;
-  letter-spacing: 0.25rem;
   transition: all 0.2s;
+  /* margin-left: 250px; */
+  margin-top: 30px;
+  letter-spacing: 4px;
   background: #1d1d1d;
 }
 #submit:hover {
   color: black;
-  box-shadow: inset 250px 0 0 0 #08fdd8;
+  box-shadow: inset 230px 0 0 0 #08fdd8;
+}
+@media (max-width: 600px) {
+  #submit {
+    display: block;
+    max-width: fit-content;
+    margin: 2rem auto auto auto;
+  }
 }
 form::before {
   content: "<form>";
@@ -696,13 +683,5 @@ form::after {
   }
   form::after {
     display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  #submit {
-    display: block;
-    max-width: fit-content;
-    margin: 2rem auto auto auto;
   }
 }
